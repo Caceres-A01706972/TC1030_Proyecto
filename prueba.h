@@ -1,31 +1,32 @@
-/*
-Creador: Ricardo Andrés Cáceres Villibord
-Matricula: A01706972
-Repositorio: https://github.com/Caceres-A01706972/TC1030_Proyecto.git
-Esta archivo contiene la clase Prueba y contiene sus clase hereda Puntos.
-*/
-
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string>
+#include <sstream>
 #include "basetimes.h" //Agrega archivo con tiempos base para cada prueba.
+
 #include "math.h"
 using namespace std;
+
+const int MAX = 1000; //constante de tamaño de arreglo
 
 //Crea la clase Prueba
 class Prueba{
     private: //Atributos
+
+        Prueba *prue[MAX]; //Se define como apuntador para usar polimorfismo
+        int p;
         string genero;
         string estilo;
         string poolType;
         float baseTime;
         float tiempo;
         int distancia;
+        float points;
 
     public://Metodos
         //Constructor
-        Prueba(string gender, string stroke, string pool, float time, float tiempo, int distance);
+        Prueba(string gender, string stroke, string pool, float time, float _tiempo, int distance, float _points);
         //Setters
         void setGenero();
         void setEstilo();
@@ -52,16 +53,22 @@ class Prueba{
         int getDistancia(){
             return distancia;
         }
+        void agregaPrueba(string gender, string stroke, string pool, float time, float tiempo, int distance, float puntos);
+
+        void imprimePruebas(string);
+
+        string to_string();
 };
 
 //Constructor
-Prueba::Prueba(string gender, string stroke, string pool, float time, float tiempo, int distance){
+Prueba::Prueba(string gender, string stroke, string pool, float time, float _tiempo, int distance, float _points){
     genero = gender;
     estilo = stroke;
     poolType = pool;
     baseTime = time;
-    tiempo = tiempo;
+    tiempo = _tiempo;
     distancia = distance;
+    points = _points;
 }
 
 //Desarrollo de setters
@@ -100,6 +107,7 @@ void Prueba::setTiempo(){
     cin>>resp;
     tiempo = resp;
 }
+
 
 void Prueba::set_baseTime(){
     //Los tiempos base los agarra del archivo llamado basetimes.h
@@ -354,11 +362,30 @@ void Prueba::set_baseTime(){
 
 }
 
+//agregaPrueba crea un objeto Prueba y lo agrega a arreglo de empleados usando como índice la variable entera p, el cual incrementa en 1.
+void Prueba::agregaPrueba(string gender, string stroke, string pool, float time, float _tiempo, int distance, float puntos){
+    prue[p] = new Prueba(gender, stroke, pool, time, _tiempo, distance, puntos);
+    p++;  
+}
+
+string Prueba::to_string() {
+  stringstream aux;
+  aux << "PRUEBA: " <<endl<< "Genero es: " << genero << ". Estilo: " << estilo << ". La piscina es de:  " << poolType << ". El tiempo base es: " << baseTime << ". Su tiempo es: " << getTiempo() << ". La distancia es: " << distancia <<" metros. Los puntos FINA son: "<< points <<"\n";
+  return aux.str();
+}
+
+void Prueba::imprimePruebas(string name){
+    cout<<"MOSTRANDO LISTA DE PRUEBAS DE "<<name<<endl;
+    for (int i = 0; i < p; i++){
+        cout<<prue[i] -> to_string();
+    }
+}
+
 //Crea la clase Puntos que hereda de la clase Prueba
 class Puntos : public Prueba{
     public:
         //Constructor con las variables que hereda
-        Puntos(string gender, string stroke, string pool, float time, float tiempo, int distance):Prueba(gender,stroke,pool,time,tiempo,distance){};
+        Puntos(string gender, string stroke, string pool, float time, float tiempo, int distance):Prueba(gender,stroke,pool,time,tiempo,distance,0.0){};
         //Metodo nuevo para la clase Puntos
         float calcularPuntos(float baseTime, float tiempo);
 };
@@ -367,5 +394,5 @@ class Puntos : public Prueba{
 float Puntos::calcularPuntos(float baseTime, float tiempo){
     float fina;
     fina = 1000*pow((baseTime/tiempo),3);
-    return fina;
+    return trunc(fina);
 }
