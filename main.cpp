@@ -9,6 +9,7 @@ Repositorio: https://github.com/Caceres-A01706972/TC1030_Proyecto.git
 
 int main(){
     Nadador swimmer1("","","",0);
+    Prueba prueba1("","","",0.0,0.0,0,0.1);
     swimmer1.setNombre();
     swimmer1.setEdad();
     swimmer1.setSexo();
@@ -24,21 +25,22 @@ int main(){
             cout<<"2. Mostrar mi Perfil"<<endl;
             cout<<"3. Ver Tiempo Base de una Prueba"<<endl;
             cout<<"4. Calcular Mis Puntos FINA"<<endl;
-            cout<<"5. SALIR\n"<<endl;
+            cout<<"5. Agregar Pruebas"<<endl;
+            cout<<"6. Ver Mis Pruebas"<<endl;
+            cout<<"7. SALIR\n"<<endl;
             cin>>resp;
             if (resp == 1){
                 hombre1.ver_recordsHombres();
             } else if (resp == 2){
                 hombre1.showInfo();
             } else if (resp == 3){
-                Prueba prueba1("","","",0.0,0.0,0);
                 prueba1.setGenero();
                 prueba1.setEstilo();
                 prueba1.set_poolType();
                 prueba1.setDistancia();
                 prueba1.set_baseTime();
-                cout<<"El tiempo base es: "<<prueba1.get_baseTime()<<endl;
-                cout<<"Deseas calcular tus puntos FINA en esta prueba? (si=1/no=0)"<<endl;
+                cout<<"El tiempo base es: "<<convertir(prueba1.get_baseTime())<<endl;
+                cout<<"Deseas calcular puntos FINA en esta prueba? (si=1/no=0)"<<endl;
                 cin>>resp;
                 if (resp == 1){
                     prueba1.setTiempo();
@@ -48,7 +50,6 @@ int main(){
                     continue;
                 }
             }else if (resp == 4){
-                Prueba prueba1("","","",0.0,0.0,0);
                 prueba1.setGenero();
                 prueba1.setEstilo();
                 prueba1.set_poolType();
@@ -58,10 +59,27 @@ int main(){
                 Puntos puntos1("","","",0.0,0.0,0);
                 cout<<"Tus puntos FINA son: "<<puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo())<<"\n"<<endl;
             } else if (resp == 5){
+                Puntos puntos1("","","",0.0,0.0,0);
+                prueba1.setGenero();
+                prueba1.setEstilo();
+                prueba1.set_poolType();
+                prueba1.setDistancia();
+                prueba1.set_baseTime();
+                prueba1.setTiempo();
+                prueba1.agregaPrueba(prueba1.getGenero(), prueba1.getEstilo(), prueba1.get_poolType(), prueba1.get_baseTime(), prueba1.getTiempo(), prueba1.getDistancia(),puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo()));
+                cout<<"Prueba agregada exitosamente!"<<endl;
+                cout<<"Deseas ver su lista de pruebas?"<<endl;
+                cin>>resp;
+                if (resp == 1){
+                    prueba1.imprimePruebas(swimmer1.getNombre());
+                } 
+            }else if (resp == 6){
+                prueba1.imprimePruebas(swimmer1.getNombre());
+            } else if (resp == 7){
                 continua = false;
-            }
-            
+                }
         }
+
     } else if (swimmer1.getSexo()=="mujer"){
         Mujer mujer1(swimmer1.getNombre(),swimmer1.getSexo(),swimmer1.getPais(),swimmer1.getEdad());
         cout<<"\nBienvenida "<<mujer1.getNombre()<<endl;
@@ -73,20 +91,21 @@ int main(){
             cout<<"2. Mostrar mi Perfil"<<endl;
             cout<<"3. Ver Tiempo Base de una Prueba"<<endl;
             cout<<"4. Calcular Mis Puntos FINA"<<endl;
-            cout<<"5. SALIR\n"<<endl;
+            cout<<"5. Agregar Pruebas"<<endl;
+            cout<<"6. Ver Mis Pruebas"<<endl;
+            cout<<"7. SALIR\n"<<endl;
             cin>>resp;
             if (resp == 1){
                 mujer1.ver_recordsMujeres();
             } else if (resp == 2){
                 mujer1.showInfo();
             } else if (resp == 3){
-                Prueba prueba1("","","",0.0,0.0,0);
                 prueba1.setGenero();
                 prueba1.setEstilo();
                 prueba1.set_poolType();
                 prueba1.setDistancia();
                 prueba1.set_baseTime();
-                cout<<"El tiempo base es: "<<prueba1.get_baseTime()<<endl;
+                cout<<"El tiempo base es: "<<convertir(prueba1.get_baseTime())<<endl;
                 cout<<"Deseas calcular tus puntos FINA en esta prueba? (si=1/no=0)"<<endl;
                 cin>>resp;
                 if (resp == 1){
@@ -97,7 +116,6 @@ int main(){
                     continue;
                 }
             }else if (resp == 4){
-                Prueba prueba1("","","",0.0,0.0,0);
                 prueba1.setGenero();
                 prueba1.setEstilo();
                 prueba1.set_poolType();
@@ -107,6 +125,23 @@ int main(){
                 Puntos puntos1("","","",0.0,0.0,0);
                 cout<<"Tus puntos FINA son: "<<puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo())<<"\n"<<endl;
             } else if (resp == 5){
+                Puntos puntos1("","","",0.0,0.0,0);
+                prueba1.setGenero();
+                prueba1.setEstilo();
+                prueba1.set_poolType();
+                prueba1.setDistancia();
+                prueba1.set_baseTime();
+                prueba1.setTiempo();
+                prueba1.agregaPrueba(prueba1.getGenero(), prueba1.getEstilo(), prueba1.get_poolType(), prueba1.get_baseTime(), prueba1.getTiempo(), prueba1.getDistancia(),puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo()));
+                cout<<"Prueba agregada exitosamente!"<<endl;
+                cout<<"Deseas ver su lista de pruebas?"<<endl;
+                cin>>resp;
+                if (resp == 1){
+                    prueba1.imprimePruebas(swimmer1.getNombre());
+                } 
+            } else if (resp == 6){
+                prueba1.imprimePruebas(swimmer1.getNombre());
+            } else if (resp == 7){
                 continua = false;
             }
         }
