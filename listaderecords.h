@@ -1,4 +1,7 @@
-/* Archivo con tiempos base para no tener conflicto al usarlo en varias clases.
+/* 
+Creador: Ricardo Andrés Cáceres Villibord
+Matricula: A01706972
+Archivo con tiempos base para no tener conflicto al usarlo en varias clases.
 Fuente: https://resources.fina.org/fina/document/2021/01/11/43122943-963d-47da-a7d1-b0ad34e76ec9/fina_points_base_times_-_scm_and_lcm_2021.pdf
 */
 
