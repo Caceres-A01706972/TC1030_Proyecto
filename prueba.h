@@ -1,3 +1,10 @@
+/*
+Creador: Ricardo Andrés Cáceres Villibord
+Matricula: A01706972
+Repositorio: https://github.com/Caceres-A01706972/TC1030_Proyecto.git
+Esta archivo contiene la clase Prueba y contiene su clase heredada Puntos.
+*/
+
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
