@@ -7,16 +7,18 @@ Repositorio: https://github.com/Caceres-A01706972/TC1030_Proyecto.git
 #include "nadador.h" //Agrega clase nadador y las clases heredadas
 #include "prueba.h" //Agrega clase prueba y la clase heredada
 
+
 int main(){
     Nadador swimmer1("","","",0);
+    Nadador *nadadores[2];
     Prueba prueba1("","","",0.0,0.0,0,0.1);
     swimmer1.setNombre();
     swimmer1.setEdad();
     swimmer1.setSexo();
     swimmer1.setPais();
     if (swimmer1.getSexo()=="hombre"){
-        Hombre hombre1(swimmer1.getNombre(),swimmer1.getSexo(),swimmer1.getPais(),swimmer1.getEdad());
-        cout<<"\nBienvenido "<<hombre1.getNombre()<<endl;
+         nadadores[0] = new Hombre(swimmer1.getNombre(),swimmer1.getSexo(),swimmer1.getPais(),swimmer1.getEdad());
+        cout<<"\nBienvenido "<<nadadores[0]->getNombre()<<endl;
         bool continua = true;
         while (continua == true){
             int resp;
@@ -30,9 +32,9 @@ int main(){
             cout<<"7. SALIR\n"<<endl;
             cin>>resp;
             if (resp == 1){
-                hombre1.ver_recordsHombres();
+                nadadores[0]->verRecords();
             } else if (resp == 2){
-                hombre1.showInfo();
+                nadadores[0]->showInfo();
             } else if (resp == 3){
                 prueba1.setGenero();
                 prueba1.setEstilo();
@@ -71,18 +73,18 @@ int main(){
                 cout<<"Deseas ver su lista de pruebas?"<<endl;
                 cin>>resp;
                 if (resp == 1){
-                    prueba1.imprimePruebas(swimmer1.getNombre());
+                    prueba1.imprimePruebas(nadadores[0]->getNombre());
                 } 
             }else if (resp == 6){
-                prueba1.imprimePruebas(swimmer1.getNombre());
+                prueba1.imprimePruebas(nadadores[0]->getNombre());
             } else if (resp == 7){
                 continua = false;
                 }
         }
 
     } else if (swimmer1.getSexo()=="mujer"){
-        Mujer mujer1(swimmer1.getNombre(),swimmer1.getSexo(),swimmer1.getPais(),swimmer1.getEdad());
-        cout<<"\nBienvenida "<<mujer1.getNombre()<<endl;
+        nadadores[1] = new Mujer(swimmer1.getNombre(),swimmer1.getSexo(),swimmer1.getPais(),swimmer1.getEdad());
+        cout<<"\nBienvenida "<<nadadores[1]->getNombre()<<endl;
         bool continua = true;
         while (continua == true){
             int resp;
@@ -96,9 +98,9 @@ int main(){
             cout<<"7. SALIR\n"<<endl;
             cin>>resp;
             if (resp == 1){
-                mujer1.ver_recordsMujeres();
+                nadadores[1]->verRecords();
             } else if (resp == 2){
-                mujer1.showInfo();
+                nadadores[1]->showInfo();
             } else if (resp == 3){
                 prueba1.setGenero();
                 prueba1.setEstilo();
@@ -137,10 +139,10 @@ int main(){
                 cout<<"Deseas ver su lista de pruebas?"<<endl;
                 cin>>resp;
                 if (resp == 1){
-                    prueba1.imprimePruebas(swimmer1.getNombre());
+                    prueba1.imprimePruebas(nadadores[1]->getNombre());
                 } 
             } else if (resp == 6){
-                prueba1.imprimePruebas(swimmer1.getNombre());
+                prueba1.imprimePruebas(nadadores[1]->getNombre());
             } else if (resp == 7){
                 continua = false;
             }
