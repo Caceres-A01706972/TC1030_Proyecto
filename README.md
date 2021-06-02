@@ -13,4 +13,5 @@ El programa toma en cuenta los tiempos base aprobados por la FINA, sexo del usua
 El programa solo corre en consola y esta hecho con c++ standard por lo que corre en todos los sistemas operativos. Compilar con "g++ nadador.h prueba.h basetimes.h listaderecords.h main.cpp".
 
 Correr en linux: "\a.out"
-correr en windows: "a.exe"
+
+Correr en windows: "a.exe"
