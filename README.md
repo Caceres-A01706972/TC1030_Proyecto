@@ -11,5 +11,6 @@ Para más información consulte la siguiente liga: https://www.fina.org/swimming
 El programa toma en cuenta los tiempos base aprobados por la FINA, sexo del usuario, el evento y el tiempo ingresado por el usuario, y procede a hacer los calculos de los puntos FINA con ayuda de una fórmula cúbica. El programa permite crear una lista con las pruebas que el usuario ingrese, asi luego podra ver la lista de sus pruebas y comparar su tiempo con el tiempo base, al igual que ver sus puntos FINA en cada una de sus pruebas.
 ## Consideraciones
 El programa solo corre en consola y esta hecho con c++ standard por lo que corre en todos los sistemas operativos. Compilar con "g++ nadador.h prueba.h basetimes.h listaderecords.h main.cpp".
+
 Correr en linux: "\a.out"
 correr en windows: "a.exe"
