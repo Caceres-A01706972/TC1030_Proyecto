@@ -70,7 +70,7 @@ int main(){
                 prueba1.setTiempo();
                 prueba1.agregaPrueba(prueba1.getGenero(), prueba1.getEstilo(), prueba1.get_poolType(), prueba1.get_baseTime(), prueba1.getTiempo(), prueba1.getDistancia(),puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo()));
                 cout<<"Prueba agregada exitosamente!"<<endl;
-                cout<<"Deseas ver su lista de pruebas?"<<endl;
+                cout<<"Deseas ver su lista de pruebas? (si=1/no=0)"<<endl;
                 cin>>resp;
                 if (resp == 1){
                     prueba1.imprimePruebas(nadadores[0]->getNombre());
@@ -136,7 +136,7 @@ int main(){
                 prueba1.setTiempo();
                 prueba1.agregaPrueba(prueba1.getGenero(), prueba1.getEstilo(), prueba1.get_poolType(), prueba1.get_baseTime(), prueba1.getTiempo(), prueba1.getDistancia(),puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo()));
                 cout<<"Prueba agregada exitosamente!"<<endl;
-                cout<<"Deseas ver su lista de pruebas?"<<endl;
+                cout<<"Deseas ver su lista de pruebas? (si=1/no=0)"<<endl;
                 cin>>resp;
                 if (resp == 1){
                     prueba1.imprimePruebas(nadadores[1]->getNombre());
