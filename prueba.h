@@ -119,251 +119,255 @@ void Prueba::setTiempo(){
 void Prueba::set_baseTime(){
     //Los tiempos base los agarra del archivo llamado basetimes.h
     //Para Fly
+    Corta corta("");
+    corta.setRecords();
+    Larga larga("");
+    larga.setRecords();
     if (genero == "masculino" && estilo == "fly" && distancia == 50){
         if (poolType == "25m"){
-            baseTime = short_cincuentaFly[0];
+            baseTime = corta.cincuentaFly[0];
         } else if (poolType == "50m"){
-            baseTime = long_cincuentaFly[0];
+            baseTime = larga.cincuentaFly[0];
         }
     } else if (genero == "femenino" && estilo == "fly" && distancia == 50){
         if (poolType == "25m"){
-            baseTime = short_cincuentaFly[1];
+            baseTime = corta.cincuentaFly[1];
         } else if (poolType == "50m"){
-            baseTime = long_cincuentaFly[1];
+            baseTime = larga.cincuentaFly[1];
         }
     }
 
     if (genero == "masculino" && estilo == "fly" && distancia == 100){
         if (poolType == "25m"){
-            baseTime = short_cienFly[0];
+            baseTime = corta.cienFly[0];
         } else if (poolType == "50m"){
-            baseTime = long_cienFly[0];
+            baseTime = larga.cienFly[0];
         }
     } else if (genero == "femenino" && estilo == "fly" && distancia == 100){
         if (poolType == "25m"){
-            baseTime = short_cienFly[1];
+            baseTime = larga.cienFly[1];
         } else if (poolType == "50m"){
-            baseTime = long_cienFly[1];
+            baseTime = larga.cienFly[1];
         }
     }
 
     if (genero == "masculino" && estilo == "fly" && distancia == 200){
         if (poolType == "25m"){
-            baseTime = short_dosFly[0];
+            baseTime = corta.dosFly[0];
         } else if (poolType == "50m"){
-            baseTime = long_dosFly[0];
+            baseTime = larga.dosFly[0];
         }
     } else if (genero == "femenino" && estilo == "fly" && distancia == 200){
         if (poolType == "25m"){
-            baseTime = short_dosFly[1];
+            baseTime = corta.dosFly[1];
         } else if (poolType == "50m"){
-            baseTime = long_dosFly[1];
+            baseTime = larga.dosFly[1];
         }
     }
 
     //Para Libre
     if (genero == "masculino" && estilo == "libre" && distancia == 50){
         if (poolType == "25m"){
-            baseTime = short_cincuentaLibre[0];
+            baseTime = corta.cincuentaLibre[0];
         } else if (poolType == "50m"){
-            baseTime = long_cincuentaLibre[0];
+            baseTime = larga.cincuentaLibre[0];
         }
     } else if (genero == "femenino" && estilo == "libre" && distancia == 50){
         if (poolType == "25m"){
-            baseTime = short_cincuentaLibre[1];
+            baseTime = corta.cincuentaLibre[1];
         } else if (poolType == "50m"){
-            baseTime = long_cincuentaLibre[1];
+            baseTime = larga.cincuentaLibre[1];
         }
     }
 
     if (genero == "masculino" && estilo == "libre" && distancia == 100){
         if (poolType == "25m"){
-            baseTime = short_cienLibre[0];
+            baseTime = corta.cienLibre[0];
         } else if (poolType == "50m"){
-            baseTime = long_cienLibre[0];
+            baseTime = larga.cienLibre[0];
         }
     } else if (genero == "femenino" && estilo == "libre" && distancia == 100){
         if (poolType == "25m"){
-            baseTime = short_cienLibre[1];
+            baseTime = corta.cienLibre[1];
         } else if (poolType == "50m"){
-            baseTime = long_cienLibre[1];
+            baseTime = larga.cienLibre[1];
         }
     }
 
     if (genero == "masculino" && estilo == "libre" && distancia == 200){
         if (poolType == "25m"){
-            baseTime = short_dosLibre[0];
+            baseTime = corta.dosLibre[0];
         } else if (poolType == "50m"){
-            baseTime = long_dosLibre[0];
+            baseTime = larga.dosLibre[0];
         }
     } else if (genero == "femenino" && estilo == "libre" && distancia == 200){
         if (poolType == "25m"){
-            baseTime = short_dosLibre[1];
+            baseTime = corta.dosLibre[1];
         } else if (poolType == "50m"){
-            baseTime = long_dosLibre[1];
+            baseTime = larga.dosLibre[1];
         }
     }
 
     if (genero == "masculino" && estilo == "libre" && distancia == 400){
         if (poolType == "25m"){
-            baseTime = short_cuatroLibre[0];
+            baseTime = corta.cuatroLibre[0];
         } else if (poolType == "50m"){
-            baseTime = long_cuatroLibre[0];
+            baseTime = larga.cuatroLibre[0];
         }
     } else if (genero == "femenino" && estilo == "libre" && distancia == 400){
         if (poolType == "25m"){
-            baseTime = short_cuatroLibre[1];
+            baseTime = corta.cuatroLibre[1];
         } else if (poolType == "50m"){
-            baseTime = long_cuatroLibre[1];
+            baseTime = larga.cuatroLibre[1];
         }
     }
 
     if (genero == "masculino" && estilo == "libre" && distancia == 800){
         if (poolType == "25m"){
-            baseTime = short_ocho[0];
+            baseTime = corta.ocho[0];
         } else if (poolType == "50m"){
-            baseTime = long_ocho[0];
+            baseTime = larga.ocho[0];
         }
     } else if (genero == "femenino" && estilo == "libre" && distancia == 800){
         if (poolType == "25m"){
-            baseTime = short_ocho[1];
+            baseTime = corta.ocho[1];
         } else if (poolType == "50m"){
-            baseTime = long_ocho[1];
+            baseTime = larga.ocho[1];
         }
     }
 
     if (genero == "masculino" && estilo == "libre" && distancia == 1500){
         if (poolType == "25m"){
-            baseTime = short_milqui[0];
+            baseTime = corta.milqui[0];
         } else if (poolType == "50m"){
-            baseTime = long_milqui[0];
+            baseTime = larga.milqui[0];
         }
     } else if (genero == "femenino" && estilo == "libre" && distancia == 1500){
         if (poolType == "25m"){
-            baseTime = short_milqui[1];
+            baseTime = corta.milqui[1];
         } else if (poolType == "50m"){
-            baseTime = long_milqui[1];
+            baseTime = larga.milqui[1];
         }
     }
 
     //Para Dorso
     if (genero == "masculino" && estilo == "dorso" && distancia == 50){
         if (poolType == "25m"){
-            baseTime = short_cincuentaDorso[0];
+            baseTime = corta.cincuentaDorso[0];
         } else if (poolType == "50m"){
-            baseTime = long_cincuentaDorso[0];
+            baseTime = larga.cincuentaDorso[0];
         }
     } else if (genero == "femenino" && estilo == "dorso" && distancia == 50){
     if (poolType == "25m"){
-            baseTime = short_cincuentaDorso[1];
+            baseTime = corta.cincuentaDorso[1];
         } else if (poolType == "50m"){
-            baseTime = long_cincuentaDorso[1];
+            baseTime = larga.cincuentaDorso[1];
         }
     }
 
     if (genero == "masculino" && estilo == "dorso" && distancia == 100){
         if (poolType == "25m"){
-            baseTime = short_cienDorso[0];
+            baseTime = corta.cienDorso[0];
         } else if (poolType == "50m"){
-            baseTime = long_cienDorso[0];
+            baseTime = larga.cienDorso[0];
         }
     } else if (genero == "femenino" && estilo == "dorso" && distancia == 100){
         if (poolType == "25m"){
-            baseTime = short_cienDorso[1];
+            baseTime = corta.cienDorso[1];
         } else if (poolType == "50m"){
-            baseTime = long_cienDorso[1];
+            baseTime = larga.cienDorso[1];
         }
     }
 
     if (genero == "masculino" && estilo == "dorso" && distancia == 200){
         if (poolType == "25m"){
-            baseTime = short_dosDorso[0];
+            baseTime = corta.dosDorso[0];
         } else if (poolType == "50m"){
-            baseTime = long_dosDorso[0];
+            baseTime = larga.dosDorso[0];
         }
     } else if (genero == "femenino" && estilo == "dorso" && distancia == 200){
         if (poolType == "25m"){
-            baseTime = short_dosDorso[1];
+            baseTime = corta.dosDorso[1];
         } else if (poolType == "50m"){
-            baseTime = long_dosDorso[1];
+            baseTime = larga.dosDorso[1];
         }
     }
 
     //Para Pecho
     if (genero == "masculino" && estilo == "pecho" && distancia == 50){
         if (poolType == "25m"){
-            baseTime = short_cincuentaPecho[0];
+            baseTime = corta.cincuentaPecho[0];
         } else if (poolType == "50m"){
-            baseTime = long_cincuentaPecho[0];
+            baseTime = larga.cincuentaPecho[0];
         }
     } else if (genero == "femenino" && estilo == "pecho" && distancia == 50){
         if (poolType == "25m"){
-            baseTime = short_cincuentaPecho[1];
+            baseTime = corta.cincuentaPecho[1];
         } else if (poolType == "50m"){
-            baseTime = long_cincuentaPecho[1];
+            baseTime = larga.cincuentaPecho[1];
         }
     }
 
     if (genero == "masculino" && estilo == "pecho" && distancia == 100){
         if (poolType == "25m"){
-            baseTime = short_cienPecho[0];
+            baseTime = corta.cienPecho[0];
         } else if (poolType == "50m"){
-            baseTime = long_cienPecho[0];
+            baseTime = larga.cienPecho[0];
         }
     } else if (genero == "femenino" && estilo == "pecho" && distancia == 100){
         if (poolType == "25m"){
-            baseTime = short_cienPecho[1];
+            baseTime = corta.cienPecho[1];
         } else if (poolType == "50m"){
-            baseTime = long_cienPecho[1];
+            baseTime = larga.cienPecho[1];
         }
     }
 
     if (genero == "masculino" && estilo == "pecho" && distancia == 200){
         if (poolType == "25m"){
-            baseTime = short_dosPecho[0];
+            baseTime = corta.dosPecho[0];
         } else if (poolType == "50m"){
-            baseTime = long_dosPecho[0];
+            baseTime = larga.dosPecho[0];
         }
     } else if (genero == "femenino" && estilo == "pecho" && distancia == 200){
         if (poolType == "25m"){
-            baseTime = short_dosPecho[1];
+            baseTime = corta.dosPecho[1];
         } else if (poolType == "50m"){
-            baseTime = long_dosPecho[1];
+            baseTime = larga.dosPecho[1];
         }
     }
 
     //Para Combinado
     if (genero == "masculino" && estilo == "combinado" && distancia == 100 && poolType == "25m"){
-        baseTime = short_cienCombi[0];
+        baseTime = corta.cienCombi[0];
     } else if (genero == "femenino" && estilo == "combinado" && distancia == 100 && poolType == "25m"){
-        baseTime = short_cienCombi[1];
+        baseTime = corta.cienCombi[1];
     }
 
     if (genero == "masculino" && estilo == "combinado" && distancia == 200){
         if (poolType == "25m"){
-            baseTime = short_dosCombi[0];
+            baseTime = corta.dosCombi[0];
         } else if (poolType == "50m"){
-            baseTime = long_dosCombi[0];
+            baseTime = larga.dosCombi[0];
         }
     } else if (genero == "femenino" && estilo == "combinado" && distancia == 200){
         if (poolType == "25m"){
-            baseTime = short_dosCombi[1];
+            baseTime = corta.dosCombi[1];
         } else if (poolType == "50m"){
-            baseTime = long_dosCombi[1];
+            baseTime = larga.dosCombi[1];
         }
     }
 
     if (genero == "masculino" && estilo == "combinado" && distancia == 400){
         if (poolType == "25m"){
-            baseTime = short_cuatroCombi[0];
+            baseTime = corta.cuatroCombi[0];
         } else if (poolType == "50m"){
-            baseTime = long_cuatroCombi[0];
+            baseTime = larga.cuatroCombi[0];
         }
     } else if (genero == "femenino" && estilo == "combinado" && distancia == 1500){
         if (poolType == "25m"){
-            baseTime = short_cuatroCombi[1];
+            baseTime = corta.cuatroCombi[1];
         } else if (poolType == "50m"){
-            baseTime = long_cuatroCombi[1];
+            baseTime = larga.cuatroCombi[1];
         }
     }
 
