@@ -5,6 +5,7 @@ Repositorio: https://github.com/Caceres-A01706972/TC1030_Proyecto.git
 Esta archivo contiene la clase Nadador y contiene sus clases heredas Hombre y Mujer.
 */
 
+
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
@@ -12,7 +13,6 @@ Esta archivo contiene la clase Nadador y contiene sus clases heredas Hombre y Mu
 #include "math.h"
 #include "listaderecords.h"
 using namespace std;
-
 
 //Funcion para poder cambiar el tiempo a formato mm:ss. s
 int convertir(float tiempo){
@@ -63,7 +63,7 @@ class Nadador{
             return pais;
         }
         virtual void verRecords(); //Funcion Virtual
-        virtual void showInfo(); //Funcion Virtual
+        virtual void showInfo(); //Funcion Virtual 
 };
 
 //Constructor
@@ -75,11 +75,7 @@ Nadador::Nadador(string name, string sex, string country, int age){
 }
 
 void Nadador::showInfo(){
-    cout<<"\nMOSTRANDO INFORMACION"<<endl;
-    cout<<"Nombre: "<<getNombre()<<endl;
-    cout<<"Edad: "<<getEdad()<<endl;
-    cout<<"Sexo: "<<getSexo()<<endl;
-    cout<<"Pais: "<<getPais()<<"\n"<<endl;
+    cout<<"Mostrando Informacion"<<endl;
 }
 
 void Nadador::verRecords(){
