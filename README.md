@@ -1,3 +1,6 @@
+# Cambios
+Para la competencia de la implementacion de Polimorfismo, se hizo una correcion de la implementacion correcta en el archivo de nadador.h haciendo uso de las funciones virtual y hacer uso de ellas con apuntadores desde el main.
+
 # TC1030_Proyecto
 Este es un repositorio para mi proyecto de la clase de Programación Orientada a Objetos.
 Trata sobre una aplicación en consola (por el momento) para nadadores. La aplicación permite hacer comparaciones de los resultados del atleta en los diferentes eventos. El atleta puede consultar cuales son los records en cada evento, al igual que poder consultar cuantos puntos FINA corresponden al tiempo que el atleta hace en ese evento. 
