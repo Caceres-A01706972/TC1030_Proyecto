@@ -21,7 +21,7 @@ const int MAX = 1000; //constante de tamaño de arreglo
 class Prueba{
     private: //Atributos
 
-        Prueba *prue[MAX]; //Se define como apuntador para usar polimorfismo
+        string prue[MAX]; 
         int p;
         string genero;
         string estilo;
@@ -41,6 +41,7 @@ class Prueba{
         void set_baseTime();
         void setTiempo();
         void setDistancia();
+        void setPuntos();
         //Getters
         string getGenero(){
             return genero;
@@ -60,11 +61,13 @@ class Prueba{
         int getDistancia(){
             return distancia;
         }
-        void agregaPrueba(string gender, string stroke, string pool, float time, float tiempo, int distance, float puntos);
+        float getPuntos(){
+            return points;
+        }
+        void agregaPrueba();
 
         void imprimePruebas(string);
 
-        string to_string();
 };
 
 //Constructor
@@ -84,6 +87,12 @@ void Prueba::setGenero(){
     cout<<"La prueba es de masculino o femenino?"<<endl;
     cin>>resp;
     genero = resp;
+}
+
+void Prueba::setPuntos(){
+    float fina;
+    fina = 1000*pow((baseTime/tiempo),3);
+    points = trunc(fina);
 }
 
 void Prueba::setEstilo(){
@@ -373,37 +382,19 @@ void Prueba::set_baseTime(){
 
 }
 
-//agregaPrueba crea un objeto Prueba y lo agrega a arreglo de empleados usando como índice la variable entera p, el cual incrementa en 1.
-void Prueba::agregaPrueba(string gender, string stroke, string pool, float time, float _tiempo, int distance, float puntos){
-    prue[p] = new Prueba(gender, stroke, pool, time, _tiempo, distance, puntos);
-    p++;  
+//agregaPrueba agreda toda la informacion de la prueba al arreglo prue.
+void Prueba::agregaPrueba(){
+    stringstream aux;
+    aux << "PRUEBA: " <<endl<< "Genero es: " << genero << ". Estilo: " << estilo << ". La piscina es de:  " << poolType << ". El tiempo base es: " << baseTime << ". Su tiempo es: " << getTiempo() << ". La distancia es: " << distancia <<" metros. Los puntos FINA son: "<< points <<"\n";
+    prue[p] = aux.str();
+    p++;
+    cout<<"Prueba agregada exitosamente!"<<endl;
 }
 
-string Prueba::to_string() {
-  stringstream aux;
-  aux << "PRUEBA: " <<endl<< "Genero es: " << genero << ". Estilo: " << estilo << ". La piscina es de:  " << poolType << ". El tiempo base es: " << baseTime << ". Su tiempo es: " << getTiempo() << ". La distancia es: " << distancia <<" metros. Los puntos FINA son: "<< points <<"\n";
-  return aux.str();
-}
-
+//Imprime lo que hay en el arreglo prue.
 void Prueba::imprimePruebas(string name){
     cout<<"MOSTRANDO LISTA DE PRUEBAS DE "<<name<<endl;
     for (int i = 0; i < p; i++){
-        cout<<prue[i] -> to_string();
+        cout<<prue[i];
     }
-}
-
-//Crea la clase Puntos que hereda de la clase Prueba
-class Puntos : public Prueba{
-    public:
-        //Constructor con las variables que hereda
-        Puntos(string gender, string stroke, string pool, float time, float tiempo, int distance):Prueba(gender,stroke,pool,time,tiempo,distance,0.0){};
-        //Metodo nuevo para la clase Puntos
-        float calcularPuntos(float baseTime, float tiempo);
-};
-
-//Desarrollo de Metodos
-float Puntos::calcularPuntos(float baseTime, float tiempo){
-    float fina;
-    fina = 1000*pow((baseTime/tiempo),3);
-    return trunc(fina);
 }
