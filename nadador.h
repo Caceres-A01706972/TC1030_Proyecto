@@ -5,7 +5,6 @@ Repositorio: https://github.com/Caceres-A01706972/TC1030_Proyecto.git
 Esta archivo contiene la clase Nadador y contiene sus clases heredas Hombre y Mujer.
 */
 
-
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
@@ -13,6 +12,7 @@ Esta archivo contiene la clase Nadador y contiene sus clases heredas Hombre y Mu
 #include "math.h"
 #include "listaderecords.h"
 using namespace std;
+
 
 //Funcion para poder cambiar el tiempo a formato mm:ss. s
 int convertir(float tiempo){
