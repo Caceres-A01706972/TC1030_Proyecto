@@ -46,8 +46,8 @@ int main(){
                 cin>>resp;
                 if (resp == 1){
                     prueba1.setTiempo();
-                    Puntos puntos1("","","",0.0,0.0,0);
-                    cout<<"Tus puntos FINA son: "<<puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo())<<"\n"<<endl;
+                    prueba1.setPuntos();
+                    cout<<"Tus puntos FINA son: "<<prueba1.getPuntos()<<"\n"<<endl;
                 } else if (resp == 0){
                     continue;
                 }
@@ -58,18 +58,17 @@ int main(){
                 prueba1.setDistancia();
                 prueba1.set_baseTime();
                 prueba1.setTiempo();
-                Puntos puntos1("","","",0.0,0.0,0);
-                cout<<"Tus puntos FINA son: "<<puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo())<<"\n"<<endl;
+                prueba1.setPuntos();
+                cout<<"Tus puntos FINA son: "<<prueba1.getPuntos()<<"\n"<<endl;
             } else if (resp == 5){
-                Puntos puntos1("","","",0.0,0.0,0);
                 prueba1.setGenero();
                 prueba1.setEstilo();
                 prueba1.set_poolType();
                 prueba1.setDistancia();
                 prueba1.set_baseTime();
                 prueba1.setTiempo();
-                prueba1.agregaPrueba(prueba1.getGenero(), prueba1.getEstilo(), prueba1.get_poolType(), prueba1.get_baseTime(), prueba1.getTiempo(), prueba1.getDistancia(),puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo()));
-                cout<<"Prueba agregada exitosamente!"<<endl;
+                prueba1.setPuntos();
+                prueba1.agregaPrueba();
                 cout<<"Deseas ver su lista de pruebas? (si=1/no=0)"<<endl;
                 cin>>resp;
                 if (resp == 1){
@@ -112,8 +111,8 @@ int main(){
                 cin>>resp;
                 if (resp == 1){
                     prueba1.setTiempo();
-                    Puntos puntos1("","","",0.0,0.0,0);
-                    cout<<"Tus puntos FINA son: "<<puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo())<<"\n"<<endl;
+                    prueba1.setPuntos();
+                    cout<<"Tus puntos FINA son: "<<prueba1.getPuntos()<<"\n"<<endl;
                 } else if (resp == 0){
                     continue;
                 }
@@ -124,18 +123,17 @@ int main(){
                 prueba1.setDistancia();
                 prueba1.set_baseTime();
                 prueba1.setTiempo();
-                Puntos puntos1("","","",0.0,0.0,0);
-                cout<<"Tus puntos FINA son: "<<puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo())<<"\n"<<endl;
+                prueba1.setPuntos();
+                cout<<"Tus puntos FINA son: "<<prueba1.getPuntos()<<"\n"<<endl;
             } else if (resp == 5){
-                Puntos puntos1("","","",0.0,0.0,0);
                 prueba1.setGenero();
                 prueba1.setEstilo();
                 prueba1.set_poolType();
                 prueba1.setDistancia();
                 prueba1.set_baseTime();
                 prueba1.setTiempo();
-                prueba1.agregaPrueba(prueba1.getGenero(), prueba1.getEstilo(), prueba1.get_poolType(), prueba1.get_baseTime(), prueba1.getTiempo(), prueba1.getDistancia(),puntos1.calcularPuntos(prueba1.get_baseTime(), prueba1.getTiempo()));
-                cout<<"Prueba agregada exitosamente!"<<endl;
+                prueba1.setPuntos();
+                prueba1.agregaPrueba();
                 cout<<"Deseas ver su lista de pruebas? (si=1/no=0)"<<endl;
                 cin>>resp;
                 if (resp == 1){
