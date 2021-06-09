@@ -10,7 +10,7 @@ Esta archivo contiene la clase Prueba y contiene su clase heredada Puntos.
 #include <stdio.h>
 #include <string>
 #include <sstream>
-#include "basetimes.h" //Agrega archivo con tiempos base para cada prueba.
+#include "piscina.h" //Agrega archivo con tiempos base para cada prueba.
 
 #include "math.h"
 using namespace std;
