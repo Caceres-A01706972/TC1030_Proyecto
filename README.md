@@ -1,5 +1,5 @@
 # Cambios
-Para la competencia de la implementacion de Polimorfismo, se hizo una correcion de la implementacion correcta en el archivo de nadador.h haciendo uso de las funciones virtual y hacer uso de ellas con apuntadores desde el main.
+Para la competencia de la implementacion de Polimorfismo, se hizo una correcion de la implementacion correcta en el archivo de nadador.h declarando las funciones virtual en la clase padre (Nadador) y desarrollando su función especifica para cada clase heredada en la clase correspondiente. Y hacer uso de ellas con apuntadores desde el main.
 
 # TC1030_Proyecto
 Este es un repositorio para mi proyecto de la clase de Programación Orientada a Objetos.
